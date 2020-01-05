@@ -1,0 +1,16 @@
+{
+    "twitterName" : "raene21",
+    "interests": [
+        "your interests",
+        "can",
+        "be",
+        "listed",
+        "here"
+    ],
+    "credentials": {
+        "consumerKey": "",
+        "consumerSecret": "",
+        "accessToken": "",
+        "accessSecret": ""
+    }
+}
