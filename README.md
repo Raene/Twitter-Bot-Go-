@@ -1,8 +1,31 @@
-# Twitter-Bot-Go-
-A basic twitter bot built in golang.
-To use, clone this repo.
-Don't forget to head over to your twitter dev account and grab your Access and Secret keys.
-Put this Keys in the config.json.
-Now Open the folder in your terminal and run "go run main.go".
-This command would install all necessary dependencies and run the program.
-If you notice any issues and want to make contributions feel free to create a branch.
+# **Buff Backend api**
+
+## **When working with money in this project, everything is saved as cents, so the backend always multiplies the dollars by 100 cents and saves it in the database as BIGINT and then divides it by 100 before display**
+
+This server runs in a docker container, please make sure you have docker and docker-compose installed visit [https://docs.docker.com/compose/install/](https://link) (for docker compose) and [https://docs.docker.com/get-docker/](https://link) (for docker)
+
+## **Create a .env(for production) and a .env.dev(for development) and a .env.test(for testing) with the variables from sampleEnv before starting the app**
+
+After installation of docker and docker compose, simply run
+
+```bash
+docker build --target development -t bufftv/user-development:latest ./userService/
+docker build --target development -t bufftv/admin-development:latest ./adminService/
+docker-compose up
+```
+
+run
+
+```bash
+docker exec -it auth_service sh
+```
+
+to access the container cli to run scripts like migrations etc.
+migrations: `npm run db-migrate` to run migrations. make sure you run `docker exec -it auth_service sh` first.
+
+in the root directory of this project
+
+To view documentation for user routes visit:
+`
+http://localhost:3000/user-api-docs
+`
